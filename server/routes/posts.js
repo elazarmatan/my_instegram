@@ -4,14 +4,14 @@ import getSpecificPosts from '../controllers/getSpecificPosts.js'
 
 const routerPosts = express.Router()
 
-const path = './db/posts.json'
+const path = './db/posts.jso'
 
 routerPosts.get('/getAllPosts',async (req,res) => {
     try {
         const posts = await getAllPosts(path)
         res.json(posts)
     } catch (error) {
-        res.status(400).json({msg:error})
+        res.status(400).json({msg:'server error'})
     }
 })
 
@@ -21,7 +21,7 @@ routerPosts.get('/getPostByUserName/:userName',async(req,res) => {
         const posts = await getSpecificPosts('userName',req.params.userName,path)
         res.json(posts)
     } catch (error) {
-        res.status(400).json({msg:error})
+        res.status(400).json({msg:'server error'})
     }
 })
 

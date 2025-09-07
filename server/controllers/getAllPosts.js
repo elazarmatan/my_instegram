@@ -6,7 +6,7 @@ export default async function getAllPosts(path){
    const data = await readFile(path)
    posts = JSON.parse(data)
    } catch (error) {
-    console.log(error)
+    throw new Error(error)
    }
    return posts
 }
