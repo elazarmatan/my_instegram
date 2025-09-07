@@ -3,3 +3,6 @@ main{
     grid-template-columns: 1fr 3fr 1fr;
     gap: 2%;
 }
+body{
+    background: rgb(201, 227, 227);
+}
