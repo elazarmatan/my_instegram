@@ -10,7 +10,7 @@ export default async function getSpecificPosts(keyPost,valuePost,path){
         })
         
     } catch (error) {
-        console.log(error)
+        throw new Error(error)
     }
     return posts
 }
