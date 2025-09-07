@@ -1,6 +1,7 @@
 import './App.css'
 import {BrowserRouter,Route,Routes} from 'react-router'
-import Posts from './pages/mainPage'
+import Posts from './pages/postsPage.tsx'
+import HomePage from './pages/homePage.tsx'
 function App() {
  
 
@@ -8,7 +9,9 @@ function App() {
     <>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Posts/>}/>
+        <Route  path='/' element={<HomePage/>}>
+          <Route  path='/' element={<Posts/>}/>
+        </Route>
       </Routes>
       </BrowserRouter>
     </>
