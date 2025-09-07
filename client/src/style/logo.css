@@ -1,0 +1,14 @@
+.logoImage{
+    
+    height: 80px;
+    width: 80px;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 8%;
+
+}
+.logoText{
+    margin-right: 40%;
+}
