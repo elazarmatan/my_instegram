@@ -1,6 +1,6 @@
 import db from '../db/posts.json'
-import Post from '../components/post'
-import Logo from '../components/logo'
+import Post from '../components/applicaton_layout/post'
+import Logo from '../components/applicaton_layout/logo'
 
 export default function Posts(){
     return  <>
