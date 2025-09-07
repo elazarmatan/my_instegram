@@ -1,0 +1,34 @@
+.post{
+border: 2px solid black;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ height: 70vh;
+ grid-column-start: 2;
+ grid-column-end: 3;
+}
+.imagePost{
+    height: 40vh;
+    width: 30vw;
+}
+.descriptPost{
+ display: inline-block;
+}
+.datePost{
+    display: inline-block;
+     color: rgb(187, 186, 186);
+     margin-left: 80%;
+}
+.likes{
+    margin-right: 55%;
+    margin-top: 3%;
+    display: inline-block;
+}
+.countLikes{
+    display: inline-block;
+    margin-right: 55%;
+}
+.userNamePost{
+    margin-right: 55%;
+}
