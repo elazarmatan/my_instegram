@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import '../style/post.css'
+import '../../style/post.css'
 export default function Post(props:{urlImage:string,description:string,userName:string,dateAndHour:string}){
     const [likes,setLikes] = useState(0)
     return<div className="post">
