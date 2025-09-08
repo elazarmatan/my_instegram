@@ -5,7 +5,7 @@ header{
 }
 #navBar{
     position: fixed;
-    width: 8%;
+    width: 12%;
     display: flex;
     justify-content: space-between;
 }
