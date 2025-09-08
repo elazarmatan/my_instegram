@@ -11,7 +11,7 @@ export default function Posts(){
     },[])
     return  <main>
       {posts.length?(posts.map(post => (
-        <Link to={'/todo'} state={post.id} className='posts'>
+        <Link to={'/todo'} state={post.id} className='posts link'>
         <Post key={post.userName + post.urlImage} urlImage={post.urlImage} userName={post.userName} description={post.description} dateAndHour={post.dateAndHour}/>
         </Link>
       ))):<h1 id='errorPosts'>⚠️ ERROR: in server</h1>}
