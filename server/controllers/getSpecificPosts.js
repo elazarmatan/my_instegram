@@ -6,7 +6,7 @@ export default async function getSpecificPosts(keyPost,valuePost,path){
         const data = await readFile(path)
         const dataParse = JSON.parse(data)
         posts = dataParse.filter((post) => {
-           post[keyPost] === valuePost
+           return post[keyPost] === valuePost
         })
         
     } catch (error) {

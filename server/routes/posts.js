@@ -4,7 +4,7 @@ import getSpecificPosts from '../controllers/getSpecificPosts.js'
 
 const routerPosts = express.Router()
 
-const path = './db/posts.jso'
+const path = './db/posts.json'
 
 routerPosts.get('/getAllPosts',async (req,res) => {
     try {
