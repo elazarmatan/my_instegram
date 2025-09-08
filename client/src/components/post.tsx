@@ -11,5 +11,6 @@ export default function Post(props:{urlImage:string,description:string,userName:
         <p className='countLikes'>{likes}</p>
         <p className="descriptPost">{props.description}</p>
         <p className="datePost">{props.dateAndHour}</p>
+        
     </div>
 }
