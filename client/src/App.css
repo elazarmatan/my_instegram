@@ -6,3 +6,12 @@ main{
 body{
     background: rgb(201, 227, 227);
 }
+@media (min-width: 100px) and (max-width: 750px) {
+   main>.post{
+    grid-column-start: 1;
+    grid-column-end: 4;
+   }
+   header>.logoText{
+    margin-right: 5%;
+   }
+}
