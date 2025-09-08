@@ -1,12 +1,12 @@
 import {readFile} from 'node:fs/promises'
 
-export default async function getSpecificPosts(keyPost,valuePost,path){
+export default async function getSpecificPosts(id,path){
     let posts
     try {
         const data = await readFile(path)
         const dataParse = JSON.parse(data)
         posts = dataParse.filter((post) => {
-           return post[keyPost] === valuePost
+           return post[id.keyPost] === id.valuePost
         })
         
     } catch (error) {

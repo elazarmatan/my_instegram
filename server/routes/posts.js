@@ -15,10 +15,9 @@ routerPosts.get('/getAllPosts',async (req,res) => {
     }
 })
 
-routerPosts.get('/getPostByUserName/:userName',async(req,res) => {
-    console.log(req.params.userName)
+routerPosts.post('/getPostByid',async(req,res) => {
     try {
-        const posts = await getSpecificPosts('userName',req.params.userName,path)
+        const posts = await getSpecificPosts(req.body,path)
         res.json(posts)
     } catch (error) {
         res.status(400).json({msg:'server error'})

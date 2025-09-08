@@ -1,5 +1,11 @@
 header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 8%;
+}
+#navBar{
+    position: fixed;
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
 }
