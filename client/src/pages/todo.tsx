@@ -12,7 +12,6 @@ export default function Todo() {
    getSpecificPost(post,setPost)
   },[])
   return <>
-  {console.log(post)}
   {post.length?<Post urlImage={post[0].urlImage} userName={post[0].userName} description={post[0].description} dateAndHour={post[0].dateAndHour}/>:<h1 id='errorPosts'>⚠️ ERROR: in server</h1>}
   </>;
 }
