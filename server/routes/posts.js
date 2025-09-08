@@ -1,6 +1,7 @@
 import express from 'express'
 import getAllPosts from '../controllers/getAllPosts.js'
 import getSpecificPosts from '../controllers/getSpecificPosts.js'
+import createPost from '../controllers/createPost.js'
 
 const routerPosts = express.Router()
 
@@ -25,7 +26,12 @@ routerPosts.post('/getPostByid',async(req,res) => {
 })
 
 routerPosts.post('/createPost',async(req,res) => {
-    res.send('hi from create')
+    try {
+       await createPost(path,req.body)
+    } catch (error) {
+        res.status(400).json({msg:'server error'})
+    }
+    res.json({msg:'create succes'})
 })
 
 routerPosts.put('/updatePost',async(req,res) => {
