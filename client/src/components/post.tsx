@@ -8,7 +8,7 @@ export default function Post(props:{urlImage:string,description:string,userName:
         <button className="likes" onClick={(e)=> {
             e.stopPropagation()
             setLikes(prev => prev === 0? prev +1:prev-1)
-        }}>like</button>
+        }}>like ❤️</button>
         <p className='countLikes'>{likes}</p>
         <p className="descriptPost">{props.description}</p>
         <p className="datePost">{props.dateAndHour}</p>
