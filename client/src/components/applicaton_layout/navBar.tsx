@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import '../../App.css'
+import { useState } from "react";
 
 export default function NavBar(){
     return<nav id="navBar">
