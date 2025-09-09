@@ -16,7 +16,7 @@ routerPosts.get('/getAllPosts',async (req,res) => {
     }
 })
 
-routerPosts.post('/getPostByid',async(req,res) => {
+routerPosts.post('/getPostById',async(req,res) => {
     try {
         const posts = await getSpecificPosts(req.body,path)
         res.json(posts)
