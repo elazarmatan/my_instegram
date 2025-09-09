@@ -12,7 +12,7 @@ export default function Posts(props:{setLastId:Function}){
     },[])
     return  <main>
       {posts.length?(props.setLastId(posts[posts.length-1].id),posts.map(post => (
-        <Link to={'/specificPost'} state={post} className='posts link'>
+        <Link to={'/specificPost'} state={post.id} className='posts link'>
         <Post key={post.id} urlImage={post.urlImage} userName={post.userName} description={post.description} dateAndHour={post.dateAndHour}/>
         </Link>
       ))):<h1 id='errorPosts'>⚠️ ERROR: in server</h1>}
