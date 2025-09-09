@@ -1,5 +1,6 @@
 import {readFile} from 'node:fs/promises'
 
+//this function Looking for a specific post
 export default async function getSpecificPosts(id,path){
     let posts
     try {

@@ -1,5 +1,6 @@
 import {readFile, writeFile} from 'node:fs/promises'
 
+//this function adds new post in data base
 export default async function createPost(path,newData){
     let posts = null;
       try {

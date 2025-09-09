@@ -2,6 +2,9 @@ import { useRef, useState} from "react"
 import createPost from "../utils/createPost"
 import '../style/createPost.css'
 
+//A post creation page that asks the user for a description,
+// lets them choose an image,
+// and shows them when finished whether the request was successful.
 export default function CreatePost(props:{lastId:number}){
     const [img,setImg] = useState('http://localhost:3000/noImagae.png')
     const userName = useRef<HTMLInputElement>(null)

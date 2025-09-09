@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import '../../App.css'
-import { useState } from "react";
 
+//General navigation component
 export default function NavBar(){
     return<nav id="navBar">
     <Link to={'/'} className="link">🏠</Link>
