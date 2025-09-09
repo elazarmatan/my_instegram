@@ -3,6 +3,8 @@ import getSpecificPost from "../utils/getSpecificPost"
 import Post from "../components/post"
 import '../style/search.css'
 
+//A search page that lets the user choose which ID to search by and what input they want to use to perform the search
+// , and returns a result if they find one.
 export default function Search(){
     const id = useRef<HTMLInputElement>(null)
     const [keyPost,setKeyPost] = useState('userName')
@@ -18,10 +20,12 @@ export default function Search(){
     <button id="submitSearch" onClick={async() => {
          const search = {keyPost:keyPost,valuePost:id.current?.value}
         const res = await getSpecificPost(search)
+        
         if(!res.ok){
             setNotError(false)
         }
         else{
+            setNotError(true)
             const result = await res.json()
             setSearchResult(result)
         }
