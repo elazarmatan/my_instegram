@@ -9,7 +9,9 @@ const path = './db/users.json'
 userRouter.post('/login',async(req,res) => {
    try {
     const userExist = await getUser(path,req.body)
+    if(!userExist.length) return res.status(400).send(false)
     const passwordMatch = await bcrypt.compare(req.body.password,userExist[0].password)
+    if(!passwordMatch) return res.status(400).send(false)
     res.send(passwordMatch)
    } catch (error) {
     console.error(error)

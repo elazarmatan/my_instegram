@@ -17,8 +17,7 @@ export default function Login(){
         if(entry.state.login === 'login'){
             const res = await login(user)
             if(res.ok){
-                setValidUser(true)
-                navigate('/home',{state:{validUser}})
+                navigate('/home',{state:{userName:userName}})
             }
             else{
                 <h1>password or username not match</h1>
