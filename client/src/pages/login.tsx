@@ -7,7 +7,6 @@ export default function Login(){
     const userName=useRef<HTMLInputElement>(null)
     const password=useRef<HTMLInputElement>(null)
     const entry = useLocation()
-    const [validUser,setValidUser] = useState(false)
     return<>
     <input type="text" placeholder="user name" ref={userName}/>
     <input type="password" placeholder="password" ref={password}/>
@@ -17,7 +16,7 @@ export default function Login(){
         if(entry.state.login === 'login'){
             const res = await login(user)
             if(res.ok){
-                navigate('/home',{state:{userName:userName}})
+                navigate('/home',{state:{userName:userName.current?.value}})
             }
             else{
                 <h1>password or username not match</h1>
