@@ -1,7 +1,7 @@
 import express from 'express'
-import getAllPosts from '../controllers/getAllPosts.js'
 import getSpecificPosts from '../controllers/getSpecificPosts.js'
 import createPost from '../controllers/createPost.js'
+import getAllposts from '../controllers/getAllPosts.js'
 
 const routerPosts = express.Router()
 
@@ -9,7 +9,7 @@ const path = './db/posts.json'
 
 routerPosts.get('/getAllPosts',async (req,res) => {
     try {
-        const posts = await getAllPosts(path)
+        const posts = await getAllposts(path)
         res.json(posts)
     } catch (error) {
         res.status(400).json({msg:'server error'})
