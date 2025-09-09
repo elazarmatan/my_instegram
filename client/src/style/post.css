@@ -1,36 +1,42 @@
-.post{
-border: 2px solid black;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
- height: 70vh;
- grid-column-start: 2;
- grid-column-end: 3;
- background: aliceblue;
+.post {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background: aliceblue;
+  border-radius: 15px;
+  margin-bottom: 2%;
 }
-.imagePost{
-    height: 40vh;
-    width: 30vw;
+.imagePost {
+  height: 40vh;
+  width: 30vw;
 }
-.descriptPost{
- display: inline-block;
- margin-left: 2%;
+.descriptPost {
+  display: inline-block;
+  margin-left: 2%;
+  font-family: 'Courier New', Courier, monospace;
 }
-.datePost{
-    display: inline-block;
-     color: rgb(187, 186, 186);
-     margin-left: 80%;
+.datePost {
+  display: inline-block;
+  color: rgb(187, 186, 186);
+  margin-left: 80%;
 }
-.likes{
+.likes {
+  margin-right: 55%;
+  margin-top: 3%;
+  display: inline-block;
+}
+.countLikes {
+  display: inline-block;
+  margin-right: 55%;
+}
+.userNamePost {
+    border: 2px solid rgb(227, 45, 221);
+    border-radius: 50%;
     margin-right: 55%;
-    margin-top: 3%;
-    display: inline-block;
-}
-.countLikes{
-    display: inline-block;
-    margin-right: 55%;
-}
-.userNamePost{
-    margin-right: 55%;
+    padding: 3%;
 }

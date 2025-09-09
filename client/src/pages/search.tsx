@@ -18,10 +18,12 @@ export default function Search(){
     <button id="submitSearch" onClick={async() => {
          const search = {keyPost:keyPost,valuePost:id.current?.value}
         const res = await getSpecificPost(search)
+        
         if(!res.ok){
             setNotError(false)
         }
         else{
+            setNotError(true)
             const result = await res.json()
             setSearchResult(result)
         }

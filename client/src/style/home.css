@@ -7,5 +7,7 @@ header{
     position: fixed;
     width: 12%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background: white;
+    border-radius: 10px;
 }
