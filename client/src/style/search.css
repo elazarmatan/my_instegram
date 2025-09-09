@@ -1,0 +1,15 @@
+#inputSearch{
+    width: 70vw;
+    margin-left: 3%;
+    height: 5vh;
+    border-radius: 15px;
+}
+#submitSearch{
+    margin-left: 2%;
+    border-radius: 10px;
+    padding: 1%;
+    background-color: rgb(85, 166, 166);
+}
+#submitSearch:hover{
+    background-color: rgb(149, 199, 199);
+}
