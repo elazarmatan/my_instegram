@@ -11,6 +11,7 @@ export default function CreatePost(props:{lastId:number}){
     const description = useRef<HTMLInputElement>(null)
     const [notError,setNotError] = useState(true)
     const [submit,setSubmit] = useState(false)
+    const [inpEmpty,setInpEmpty] = useState(true)
     const now = new Date()
     let post
     
@@ -25,6 +26,10 @@ export default function CreatePost(props:{lastId:number}){
     <input className="inputCreate" placeholder="description" ref={description}/>
     <button id="subCreate" onClick={async(e) => {
         e.preventDefault()
+        if(!userName.current?.value || !description.current?.value){
+            setInpEmpty(false)
+            return
+        }
         setSubmit(true)
          post = {
     "id":props.lastId + 1,
@@ -43,7 +48,7 @@ export default function CreatePost(props:{lastId:number}){
     }}>submit</button>
     </form>
     {
-        submit?(notError?<h1 id="succes">✅ succes</h1>:<h1 id='errorPosts'>⚠️ ERROR: in server</h1>):<p></p>
+        inpEmpty?(submit?(notError?<h1 id="succes">✅ succes</h1>:<h1 id='errorPosts'>⚠️ ERROR: in server</h1>):<p></p>):<p>This is a required fields</p>
     }
     </section>
 }
