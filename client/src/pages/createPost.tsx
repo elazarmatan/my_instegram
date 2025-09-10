@@ -15,7 +15,6 @@ export default function CreatePost(props: { lastId: number }) {
   const [inpEmpty, setInpEmpty] = useState(true);
   const now = new Date();
   let post;
-
   return (
     <section id="create">
       {userName.state ? (
@@ -25,6 +24,7 @@ export default function CreatePost(props: { lastId: number }) {
             <option value="http://localhost:3000/zahavi.png">zahavi</option>
             <option value="http://localhost:3000/dorPeretz.png">peretz</option>
           </select>
+          
           <input
             className="inputCreate"
             placeholder="description"

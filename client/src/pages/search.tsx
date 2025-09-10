@@ -12,7 +12,6 @@ export default function Search(){
     const [keyPost,setKeyPost] = useState('userName')
     const [searchResult,setSearchResult] = useState<Array<{urlImage:string; userName:string; description:string; dateAndHour:string}>>([])
     const [notError,setNotError] = useState(true)
-    console.log(userName)
     return<>
     {userName.state?<>
          <select value={keyPost} onChange={(e) => setKeyPost(e.target.value)}>

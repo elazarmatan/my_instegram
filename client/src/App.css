@@ -13,6 +13,7 @@ body{
    .posts>.post{
     grid-column-start: 1;
     grid-column-end: 4;
+    height: 60vh;
    }
    header>.logoText{
     margin-right: 5%;
