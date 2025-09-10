@@ -14,7 +14,23 @@ linkKodkod/
 |
 ├──📁client/
 ```
+
+### התקנת תלויות
+
+```
+# client side
+npm i react react-router
+
+# server side
+npm i express dotenv cors bcrypt jsonwebtoken
+```
 ### הרצת הפרויקט
 ```bash
+# הרצת השרת (טרמינל ראשון)
+cd server
+node --watch server
+
+# הרצת הקליינט (טרמינל שני)
+cd client
 npm run dev
 ```
