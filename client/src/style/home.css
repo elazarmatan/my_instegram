@@ -11,3 +11,9 @@ header{
     background: white;
     border-radius: 10px;
 }
+@media (min-width: 100px) and (max-width: 750px){
+    #navBar{
+        width: 23%;
+        background-color: rgb(145, 221, 196);
+    }
+}

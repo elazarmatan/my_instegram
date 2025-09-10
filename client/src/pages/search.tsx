@@ -2,16 +2,19 @@ import { useRef, useState } from "react"
 import getSpecificPost from "../utils/getSpecificPost"
 import Post from "../components/post"
 import '../style/search.css'
+import { useLocation } from "react-router"
 
 //A search page that lets the user choose which ID to search by and what input they want to use to perform the search
 // , and returns a result if they find one.
 export default function Search(){
+    const userName = useLocation()
     const id = useRef<HTMLInputElement>(null)
     const [keyPost,setKeyPost] = useState('userName')
     const [searchResult,setSearchResult] = useState<Array<{urlImage:string; userName:string; description:string; dateAndHour:string}>>([])
     const [notError,setNotError] = useState(true)
     return<>
-    <select value={keyPost} onChange={(e) => setKeyPost(e.target.value)}>
+    {userName.state?<>
+         <select value={keyPost} onChange={(e) => setKeyPost(e.target.value)}>
         <option value="userName">userName</option>
         <option value="dateAndHour">date And Hour</option>
         <option value="description">description</option>
@@ -30,6 +33,9 @@ export default function Search(){
             setSearchResult(result)
         }
     }}>search</button>
+    </>
+    :<p></p>}
+   
     {notError?(id.current?.value?(searchResult.length?(searchResult.map(post => 
         <Post key={post.userName + post.urlImage} urlImage={post.urlImage} userName={post.userName} description={post.description} dateAndHour={post.dateAndHour}/>
     )):<h1>No posts found</h1>):<p></p>):<h1 id='errorPosts'>⚠️ ERROR: in server</h1>}

@@ -9,7 +9,6 @@ import SpecificPost from './pages/specificPost.tsx'
 import Entry from './pages/entry.tsx'
 import Login from './pages/login.tsx'
 function App() {
- 
   const [lastId,setLastId]=useState(0)
   return (
     <>
