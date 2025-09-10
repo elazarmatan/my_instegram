@@ -8,7 +8,7 @@ export default function SpecificPost() {
   const [notError,setNotError] = useState(false)
   const [post,setPost] = useState<Array<{urlImage:string; userName:string; description:string; dateAndHour:string}>>([])
   useEffect(() => {
-    const body = {keyPost:'id',valuePost:id.state}
+    const body = {keyPost:'id',valuePost:id.state.id}
     const fetchPost = async() => {
       const res = await getSpecificPost(body)
       if(res.ok){
