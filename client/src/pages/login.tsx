@@ -50,6 +50,6 @@ export default function Login(){
             }
         }
     }}>submit</button>
-    {inpEmpty?(submit?(notError?<p></p>:<h1 id='errorPosts'>{error}</h1>):<p></p>):<p>This is a required fields</p>}
+    {inpEmpty?(submit?(notError?<p></p>:<h1 id='errorPosts'>{error}</h1>):<p></p>):<p id="errorPosts">This is a required fields</p>}
     </section>
 }
