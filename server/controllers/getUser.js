@@ -1,4 +1,5 @@
 import { readFile } from "node:fs/promises";
+//this function return user from data base
 
 export default async function getUser(path, validUser) {
   let userExist =null  

@@ -1,5 +1,5 @@
 import {readFile, writeFile} from 'node:fs/promises'
-
+//this function create user in data base
 export default async function createUser(path,newUser){
      let users = null;
       try {
