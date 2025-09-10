@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
   grid-column-start: 2;
   grid-column-end: 3;
   background: aliceblue;
@@ -14,6 +14,7 @@
 .imagePost {
   height: 40vh;
   width: 30vw;
+  border-radius: 15px;
 }
 .descriptPost {
   display: inline-block;
@@ -35,8 +36,8 @@
   margin-right: 55%;
 }
 .userNamePost {
-    border: 2px solid rgb(227, 45, 221);
-    border-radius: 50%;
-    margin-right: 55%;
+    /* border: 2px solid rgb(227, 45, 221);
+    border-radius: 50%; */
+    margin-right: 75%;
     padding: 3%;
 }
