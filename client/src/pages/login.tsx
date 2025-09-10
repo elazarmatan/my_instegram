@@ -14,9 +14,9 @@ export default function Login(){
     const [inpEmpty,setInpEmpty] = useState(true)
     const [error,setError] = useState('')
     return<section id="login">
-    <input type="text" placeholder="user name" ref={userName} className="login" required/>
-    <input type="password" placeholder="password" ref={password} className="login" required/>
-    <button className="login" onClick={async() => {
+    <input type="text" placeholder="user name" ref={userName} className="inputLogin" required/>
+    <input type="password" placeholder="password" ref={password} className="inputLogin" required/>
+    <button className="buttonLogin" onClick={async() => {
         if(!userName.current?.value || !password.current?.value){
             setInpEmpty(false)
             return

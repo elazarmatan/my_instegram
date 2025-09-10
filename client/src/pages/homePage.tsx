@@ -13,7 +13,7 @@ export default function HomePage(){
         <Logo/>
         <NavBar/>
     </header>:
-    <h1>blocked</h1>
+    <h1 id='errorPosts'>blocked You must pass verification</h1>
     }
     <Outlet/>
     </>

@@ -19,6 +19,7 @@ routerPosts.get('/getAllPosts',async (req,res) => {
 routerPosts.post('/getPostById',async(req,res) => {
     try {
         const posts = await getSpecificPosts(req.body,path)
+        await new Promise(resolve => setTimeout(resolve,2000))
         res.json(posts)
     } catch (error) {
         res.status(400).json({msg:'server error'})
