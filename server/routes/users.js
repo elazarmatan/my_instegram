@@ -26,7 +26,7 @@ userRouter.post('/createUser',async(req,res) => {
         const hashedPass = await bcrypt.hash(req.body.password,12)
         req.body.password = hashedPass
         await createUser(path,req.body)
-        const token = jwt.sign({userName:req.body.userName},process.env.SECRETE_KEY,{expiresIn:'7m'})
+        const token = jwt.sign({userName:req.body.userName},process.env.SECRETE_KEY,{expiresIn:'7h'})
         res.json({token:token})
     } catch (error) {
         console.error(error)
@@ -38,7 +38,6 @@ userRouter.get('/checkToken',async(req,res) => {
     try {
     const token = req.headers['authorization'].split(" ")[1];
     const decoded = jwt.verify(token, process.env.SECRETE_KEY);
-    console.log(decoded)
     res.json(decoded);
   } catch (err) {
     res.status(400).json({ msg: `server internal error: ${err}` });
